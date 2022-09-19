@@ -48,13 +48,21 @@ void PrintArray (int[] array)
     return;
 }
 
-
+try
+{
 Console.WriteLine("Введите размер массива: ");
 int arrayLength = int.Parse(Console.ReadLine());
+
 Console.WriteLine("Старый массив: ");
 int[] array =  GetArray(arrayLength);
 PrintArray(array);
 Console.WriteLine();
+
 Console.WriteLine("Новый массив: ");
 int [] arrayNew = GetNewArray(array);
 PrintArray(arrayNew);
+}
+catch
+{
+    Console.WriteLine("Ошибка! Неверный ввод размера массива! Введите целое число.");
+}
